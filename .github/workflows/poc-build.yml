@@ -29,7 +29,7 @@ jobs:
             image: eu.gcr.io/gitpod-core-dev/dev/dev-environment:mads-leeway-v0.7.3.4
         steps:
             - uses: actions/checkout@v3
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4.1.7
               with:
                   name: previewctl
             - name: Configure workspace
@@ -128,10 +128,10 @@ jobs:
                   cp -r /__w/gitpod/gitpod /workspace
                   # Needed by google-github-actions/setup-gcloud
                   sudo chown -R gitpod:gitpod /__t
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4.1.7
               with:
                   name: installer-artifacts
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4.1.7
               with:
                   name: previewctl
             - name: Install artifacts
@@ -174,7 +174,7 @@ jobs:
                   cp -r /__w/gitpod/gitpod /workspace
                   # Needed by google-github-actions/setup-gcloud
                   sudo chown -R gitpod:gitpod /__t
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4.1.7
               with:
                   name: previewctl
             - id: auth
